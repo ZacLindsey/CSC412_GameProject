@@ -24,19 +24,21 @@ public class ChangeDirection : MonoBehaviour
         EnemyUnit eu = other.gameObject.GetComponent<EnemyUnit>();
         int dir = Random.Range(0, 2);
 
+        eu.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
         if (eu != null)
         {
             if (dir == 0)
             {
-                eu.speed.x = newDirection1.x;
-                eu.speed.y = newDirection1.y;
-                eu.speed.z = newDirection1.z;
+                eu.velocity.x = newDirection1.x * 100.0f;
+                eu.velocity.y = newDirection1.y * 100.0f;
+                eu.velocity.z = newDirection1.z * 100.0f;
             }
             else if (dir == 1)
             {
-                eu.speed.x = newDirection2.x;
-                eu.speed.y = newDirection2.y;
-                eu.speed.z = newDirection2.z;
+                eu.velocity.x = newDirection2.x * 100.0f;
+                eu.velocity.y = newDirection2.y * 100.0f;
+                eu.velocity.z = newDirection2.z * 100.0f;
             }
         }
     }

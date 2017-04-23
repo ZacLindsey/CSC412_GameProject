@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 		if (player.CompareTag("US"))
         {
             speed = 20f;
-            rotateSpeed = 25f;
+            rotateSpeed = 100f;
             health = 125f;
             foreach(Renderer r in rends)
             {
